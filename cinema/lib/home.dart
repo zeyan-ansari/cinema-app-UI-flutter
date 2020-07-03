@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -24,7 +25,9 @@ class _HomeState extends State<Home> {
       ),
 
       child: Scaffold(backgroundColor: Colors.transparent,
-        appBar: AppBar(title: Text('KAHAANI BAAZ',style: TextStyle(fontWeight: FontWeight.w300),),centerTitle: true,backgroundColor: Colors.black,leading: Image.asset('assets/logo.jpeg'),),
+        appBar: AppBar(title: Text('CINEMA',style: TextStyle(fontWeight: FontWeight.w300),),centerTitle: true,backgroundColor: Colors.black,
+          leading: Container(alignment: Alignment.center,
+            child: FaIcon(FontAwesomeIcons.ticketAlt,color: Colors.grey,size: 40,), ),),
           bottomNavigationBar: CurvedNavigationBar(
             backgroundColor: Color(0xFF2B4162),height: 50,
             items: <Widget>[

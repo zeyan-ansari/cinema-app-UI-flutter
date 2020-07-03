@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'dart:math'as math;
 
 import '../home.dart';
 
@@ -11,6 +13,7 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
+
     return Container(decoration: BoxDecoration(
       gradient: new LinearGradient(
           colors: [
@@ -26,7 +29,20 @@ class _SignInState extends State<SignIn> {
         body:Container(margin: EdgeInsets.symmetric(horizontal: 20),
           child: Column(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Container(child: Text('क',style: TextStyle(color: Colors.white,fontSize: 160),),),
+
+
+              Stack(
+                children: <Widget>[
+
+                  Container(margin: EdgeInsets.only(bottom: 30),
+                    child: Transform.rotate(angle:340 * math.pi / 180,
+                      child: FaIcon(FontAwesomeIcons.ticketAlt,size: 150,color: Colors.grey,)), ),
+                  Container(margin: EdgeInsets.only(bottom: 30),
+                    child: Transform.rotate(angle:337 * math.pi / 180,
+                        child: Text("Cinema",style: TextStyle(color: Colors.white,fontSize: 40))), ),
+
+                ],
+              ),
           Container(padding: EdgeInsets.only(left: 15),
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),color: Colors.black,),
             child: TextFormField(
